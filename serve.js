@@ -10,8 +10,8 @@ const mount = st({
   index: 'index.html'
 })
 
-http.createServer(
-  function (req, res) { mount(req, res) }
-).listen(8080,
-  function () { console.log('http://localhost:8080') }
-)
+http.createServer((req, res) => {
+   mount(req, res)
+}).listen(8080,() => {
+   console.log('http://localhost:8080')
+})
